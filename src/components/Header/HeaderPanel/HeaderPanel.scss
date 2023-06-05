@@ -1,0 +1,19 @@
+.header__panel {
+	display: flex;
+	justify-content: space-between;
+	.deskop {
+		display: none;
+		@media (min-width:550px) {
+			display: block;
+		}
+	}
+	.icon {
+		width: 24px;
+		height: 24px;
+	}
+	.button {
+		&:hover {
+			opacity: 0.4;
+		}
+	}
+}

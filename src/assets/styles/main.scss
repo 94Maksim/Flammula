@@ -1,0 +1,23 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+
+.transformX-enter-active, .transformX-leave-active {
+	transform: translateX(0%);
+	transition: .3s;
+}
+
+.transformX-enter-from, .transformX-leave-to {
+	transform: translateX(-100%);
+	transition: .3s;
+}
+
+.transformY-enter-active, .transformY-leave-active {
+	transform: translateY(0%);
+	transition: .3s;
+}
+
+.transformY-enter-from, .transformY-leave-to {
+	transform: translateY(-100%);
+	transition: .5s;
+}
