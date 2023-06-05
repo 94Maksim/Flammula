@@ -20,5 +20,8 @@ export default {
         this.$emit("hideDropdown");
       }
     },
+    onClick(name) {
+      this.$emit("onClick", name);
+    },
   },
 };

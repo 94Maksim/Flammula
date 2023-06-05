@@ -1,20 +1,55 @@
 import { createRouter, createWebHistory } from "vue-router";
-// import Main from "../views/Main/Main.vue";
+import MainPage from "../views/MainPage/MainPage.vue";
+import LoginPage from "../views/LoginPage/LoginPage.vue";
+import FavoritePage from "../views/FavoritePage/FavoritePage.vue";
+import BasketPage from "../views/BasketPage/BasketPage.vue";
+import CatalogPage from "../views/CatalogPage/CatalogPage.vue";
+import JournalPage from "../views/JournalPage/JournalPage.vue";
+import PaymentPage from "../views/PaymentPage/PaymentPage.vue";
+import AboutPage from "../views/AboutPage/AboutPage.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      //path: "/",
-      //name: "home",
-      // component: Main,
+      path: "/",
+      name: "home",
+      component: MainPage,
     },
     {
-      //path: "/about",
-      //name: "about",
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
+      path: "/login",
+      name: "login",
+      component: LoginPage,
+    },
+    {
+      path: "/favorite",
+      name: "favorite",
+      component: FavoritePage,
+    },
+    {
+      path: "/basket",
+      name: "basket",
+      component: BasketPage,
+    },
+    {
+      path: "/catalog",
+      name: "catalog",
+      component: CatalogPage,
+    },
+    {
+      path: "/journal",
+      name: "journal",
+      component: JournalPage,
+    },
+    {
+      path: "/payment",
+      name: "payment",
+      component: PaymentPage,
+    },
+    {
+      path: "/about",
+      name: "about",
+      component: AboutPage,
     },
   ],
 });

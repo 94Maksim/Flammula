@@ -20,7 +20,24 @@ export default {
     return {
       isShowDropdown: false,
       isShowSearch: false,
-      titles: ["Товары", "Журнал", "Оплата", "О нас"],
+      titles: [
+        {
+          title: "Товары",
+          name: "catalog",
+        },
+        {
+          title: "Журнал",
+          name: "journal",
+        },
+        {
+          title: "Оплата",
+          name: "payment",
+        },
+        {
+          title: "О нас",
+          name: "about",
+        },
+      ],
       names: [
         {
           icon: "search",
@@ -57,6 +74,9 @@ export default {
     },
     hideSearch() {
       this.isShowSearch = false;
+    },
+    routerPush(path) {
+      this.$router.push(`/${path}`);
     },
   },
 };

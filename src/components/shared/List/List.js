@@ -6,4 +6,9 @@ export default {
       required: false,
     },
   },
+  methods: {
+    onClick(name) {
+      this.$emit("onClick", name);
+    },
+  },
 };

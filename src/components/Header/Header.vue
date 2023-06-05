@@ -4,6 +4,7 @@
       <HeaderDropdown
         v-if="isShowDropdown"
         @hideDropdown="hideDropdown"
+        @onClick="routerPush"
         :items="titles"
       />
     </Transition>
@@ -16,9 +17,9 @@
           <Icon name="menu" />
         </div>
         <div class="header__logo">
-          <Icon name="logo" />
+          <Icon name="logo" @click="$router.push('/')" />
         </div>
-        <List class="header__titles" :items="titles" />
+        <List class="header__titles" :items="titles" @onClick="routerPush" />
         <HeaderPanel :items="names" @showSearch="showSearch" />
       </nav>
     </Container>

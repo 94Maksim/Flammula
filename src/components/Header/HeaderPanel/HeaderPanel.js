@@ -16,5 +16,10 @@ export default {
     showSearch(item) {
       this.$emit("showSearch", item);
     },
+    routerPush(path) {
+      if (path !== "search") {
+        this.$router.push(`/${path}`);
+      }
+    },
   },
 };
