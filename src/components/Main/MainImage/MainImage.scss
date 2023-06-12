@@ -1,0 +1,12 @@
+.main-image {
+	margin:  0 auto 10px auto;
+	max-width: 1920px;
+	height: 550px;
+	.image {
+		height: 100%;
+		width: 100%;
+		img {
+			height: 100%;
+		}
+	}
+}
