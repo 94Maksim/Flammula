@@ -1,0 +1,38 @@
+.product-card{
+	height: 385px;
+	box-shadow: 0 0 5px 3px var(--box-shadow-color);
+	border-radius: 3px;
+	&__image {
+		width: 100%;
+		height: 341px;
+		.image{
+			height: 100%;
+			width: 100%;
+			display: flex;
+			text-align: center;
+			justify-content: center;
+			img {
+				height: 100%;
+				object-fit: contain;
+			}
+		}
+	}
+	&__info {
+		padding: 5px;
+	}
+	&__title {
+		font-size: 0.82rem;
+		font-weight: bold;
+		margin-bottom: 4px;
+	}
+	&__price-tag {
+		font-size: 0.8rem;
+		margin-right: 5px;
+		opacity: 0.5;
+	}
+	&__price-discount {
+		font-size: 0.8rem;
+		color: var(--bs-color-red)
+	}
+
+}

@@ -1,0 +1,9 @@
+.main__products {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 275px);
+	grid-auto-rows: 400px;
+	grid-column-gap: 1rem;
+	justify-content: space-around;
+	margin-bottom: 25px;
+}

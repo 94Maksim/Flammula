@@ -1,7 +1,8 @@
-import axios from "axios";
+import API from "../../api/index.js";
 import MainImage from "../../components/Main/MainImage/MainImage.vue";
 import Loader from "../../components/shared/Loader/Loader.vue";
 import MainGoods from "../../components/Main/MainGoods/MainGoods.vue";
+import Container from "../../components/shared/Container/Container.vue";
 
 export default {
   name: "MainPage",
@@ -9,11 +10,12 @@ export default {
     MainImage,
     Loader,
     MainGoods,
+    Container,
   },
   data() {
     return {
       isLoading: false,
-      mainImage: null,
+      mainImages: null,
       category: [
         {
           name: "newArrivals",
@@ -40,22 +42,34 @@ export default {
           title: "Ноутбуки",
         },
       ],
+      dataGoods: null,
     };
   },
   methods: {
-    async fetchImage() {
-      const response = await axios.get(
-        "https://jsonplaceholder.typicode.com/photos/8"
-      );
-      this.mainImage = response.data;
+    getDataGoods(category) {
+      API.products
+        .getProductsByCategory(category)
+        .then((data) => (this.dataGoods = data));
+    },
+    addClass(name) {
+      this.category.forEach((el) => {
+        if (el.className) {
+          delete el.className;
+        }
+        if (el.name === name) {
+          el.className = "--black";
+        }
+      });
     },
   },
   mounted() {
-    this.fetchImage();
+    this.category[0].className = "--black";
+    API.images.getMainImages().then((images) => (this.mainImages = images));
+    this.getDataGoods("newArrivals");
   },
   watch: {
-    mainImage() {
-      if (this.mainImage !== null) {
+    mainImages() {
+      if (this.mainImages !== null) {
         this.isLoading = true;
       }
     },

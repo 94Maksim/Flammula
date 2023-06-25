@@ -7,7 +7,7 @@
       class="list-item"
       @click="onClick(item.name)"
     >
-      <span>{{ item.title }}</span>
+      <span :class="item.className">{{ item.title }}</span>
     </li>
   </ul>
 </template>

@@ -1,0 +1,28 @@
+.main__goods {
+	.list{
+		width: 60%;
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto 25px auto;
+		padding: 10px 0;
+		font-size: 1.1rem;
+		&-item {
+			cursor: pointer;
+			span {
+				color: var(--bs-color-grey);
+				background: linear-gradient(black, black) no-repeat;
+				background-size: 0% 2px;
+				background-position: 50% 22px;
+				transition: .3s;
+			}
+			span {
+				padding-bottom: 5px;
+			}
+			.--black{
+				background-size: 100% 2px;
+				color: #000;
+				transition: .3s;
+			}
+		}
+	}
+}

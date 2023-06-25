@@ -1,6 +1,7 @@
 <template>
   <div class="main__goods">
-    <List :items="category" />
+    <List :items="category" @onClick="onClick" />
+    <MainProducts :products="dataGoods" />
   </div>
 </template>
 
