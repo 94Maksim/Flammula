@@ -1,12 +1,19 @@
 .main__goods {
 	.list{
-		width: 60%;
-		display: flex;
-		justify-content: space-between;
+		width: 70%;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, 100px);
+		grid-auto-rows: 30px;
+		justify-content: space-around;
+		align-items: center;
+		padding-top: 10px;
 		margin: 0 auto 25px auto;
-		padding: 10px 0;
 		font-size: 1.1rem;
+		@media (max-width:1023px) {
+			width: 90%;
+		}
 		&-item {
+			text-align: center;
 			cursor: pointer;
 			span {
 				color: var(--bs-color-grey);

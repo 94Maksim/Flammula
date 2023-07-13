@@ -1,11 +1,13 @@
 import List from "../../shared/List/List.vue";
 import MainProducts from "../MainProducts/MainProducts.vue";
+import Container from "../../shared/Container/Container.vue";
 
 export default {
   name: "MainGoods",
   components: {
     List,
     MainProducts,
+    Container,
   },
   props: {
     category: {
