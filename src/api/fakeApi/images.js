@@ -8,22 +8,38 @@ const mainImageUrls = [
 const mainImages = [];
 
 async function getMainImages() {
-  const requests = mainImageUrls.map((url) =>
-    axios.get(url, { responseType: "blob" })
-  );
-  Promise.all(requests)
-    .then((responses) => {
-      responses.forEach((response) => {
-        const imageURL = URL.createObjectURL(response.data);
-        mainImages.push(imageURL);
-      });
-    })
-    .catch((error) => {
-      alert(error);
-    });
-  return mainImages;
+  try {
+    const requests = mainImageUrls.map((url) =>
+      axios.get(url, { responseType: "blob" })
+    );
+    const responses = await Promise.all(requests);
+    const mainImages = responses.map((response) =>
+      URL.createObjectURL(response.data)
+    );
+    return mainImages;
+  } catch (error) {
+    alert(error);
+    return [];
+  }
+}
+async function getCategoriesMainImage(categories) {
+  try {
+    const requests = categories.map((category) =>
+      axios.get(`https://dummyjson.com/products/category/${category.name}`)
+    );
+
+    const responses = await Promise.all(requests);
+    const images = responses.map(
+      (response) => response.data.products[0].images[0]
+    );
+    return images;
+  } catch (error) {
+    alert(error);
+    return [];
+  }
 }
 
 export default {
   getMainImages,
+  getCategoriesMainImage,
 };

@@ -10,5 +10,11 @@ export default {
     onClick(name) {
       this.$emit("onClick", name);
     },
+    onMouseEnter(name) {
+      this.$emit("onMouseEnter", name);
+    },
+    onMouseLeave(name) {
+      this.$emit("onMouseLeave", name);
+    },
   },
 };

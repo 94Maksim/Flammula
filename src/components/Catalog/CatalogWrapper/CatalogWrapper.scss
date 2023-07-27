@@ -1,0 +1,13 @@
+.catalog-wrapper {
+	min-height: 100vh;
+	margin: 30px 0 30px 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 360px);
+	grid-auto-rows: 310px;
+	justify-content: space-around;
+	align-items: center;
+	@media (max-width:379px) {
+		grid-template-columns: repeat(auto-fit, 260px);
+		grid-auto-rows: 250px;
+	}
+}

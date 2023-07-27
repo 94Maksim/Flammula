@@ -1,6 +1,6 @@
 <template>
   <div class="field">
-    <input :type="type" :placeholder="placeholder" v-focus />
+    <input :type="type" :placeholder="placeholder"/>
 	<slot/>
   </div>
 </template>

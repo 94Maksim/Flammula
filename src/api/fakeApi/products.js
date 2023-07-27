@@ -27,7 +27,16 @@ async function getProductsByCategory(category) {
   }
   return products;
 }
+async function getProductById(id) {
+  let product = null;
+  await axios
+    .get(`https://dummyjson.com/products/${id}`)
+    .then((response) => (product = response.data))
+    .catch((error) => alert(error));
+  return product;
+}
 
 export default {
   getProductsByCategory,
+  getProductById,
 };

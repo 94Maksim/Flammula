@@ -1,4 +1,6 @@
 .header {
+	position: relative;
+	box-shadow: 0 0 10px 2px var(--bs-color-grey);
 	&__nav {
 		display: flex;
 		justify-content: space-between;
@@ -60,11 +62,29 @@
 		display: flex;
 		justify-content: space-between;
 		padding-right: 30px;
+		position: relative;
+		z-index: 5;
 		@media (max-width:1023px) {
 			display: none;
 		}
 		@media (max-width:1439px) {
 			padding-right: 20px;
+		}
+		.icon {
+			width: 24px;
+			height: 24px;
+			position: absolute;
+			top: 0;
+			left: 85px;
+			z-index: 1;
+			transition: .3s;
+			@media (max-width:1439px) {
+				left: 73px;
+			}
+		}
+		.icon.active {
+			transform: rotate(-180deg);
+			transition: .3s;
 		}
 	}
 }

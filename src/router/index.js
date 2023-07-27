@@ -7,6 +7,8 @@ import CatalogPage from "../views/CatalogPage/CatalogPage.vue";
 import JournalPage from "../views/JournalPage/JournalPage.vue";
 import PaymentPage from "../views/PaymentPage/PaymentPage.vue";
 import AboutPage from "../views/AboutPage/AboutPage.vue";
+import CatalogItems from "../components/Catalog/CatalogItems/CatalogItems.vue";
+import ProductPage from "../views/ProductPage/ProductPage.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -35,6 +37,16 @@ const router = createRouter({
       path: "/catalog",
       name: "catalog",
       component: CatalogPage,
+    },
+    {
+      path: "/catalog/:items",
+      name: "catalogItems",
+      component: CatalogItems,
+    },
+    {
+      path: "/catalog/:items/:id",
+      name: "catalogItemsId",
+      component: ProductPage,
     },
     {
       path: "/journal",

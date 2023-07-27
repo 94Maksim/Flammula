@@ -1,3 +1,4 @@
+import API from "../../api/index.js";
 import Icon from "../shared/Icon/Icon.vue";
 import Container from "../shared/Container/Container.vue";
 import Button from "../shared/Button/Button.vue";
@@ -5,6 +6,7 @@ import List from "../shared/List/List.vue";
 import HeaderPanel from "./HeaderPanel/HeaderPanel.vue";
 import HeaderDropdown from "./HeaderDropdown/HeaderDropdown.vue";
 import HeaderSearch from "./HeaderSearch/HeaderSearch.vue";
+import HeaderCaterories from "./HeaderCategories/HeaderCaterories.vue";
 export default {
   name: "Header",
   components: {
@@ -15,11 +17,14 @@ export default {
     HeaderPanel,
     HeaderDropdown,
     HeaderSearch,
+    HeaderCaterories,
   },
   data() {
     return {
       isShowDropdown: false,
       isShowSearch: false,
+      isShowCategories: false,
+      allCategories: null,
       titles: [
         {
           title: "Товары",
@@ -77,6 +82,20 @@ export default {
     },
     routerPush(path) {
       this.$router.push(`/${path}`);
+      this.isShowCategories = false;
     },
+    showCategories(name) {
+      if (name === "catalog") {
+        this.isShowCategories = true;
+      }
+    },
+    hideCategories() {
+      this.isShowCategories = false;
+    },
+  },
+  mounted() {
+    API.categories
+      .getListCategories()
+      .then((response) => (this.allCategories = response));
   },
 };

@@ -19,9 +19,23 @@
         <div class="header__logo">
           <Icon name="logo" @click="$router.push('/')" />
         </div>
-        <List class="header__titles" :items="titles" @onClick="routerPush" />
+        <List
+          class="header__titles"
+          :items="titles"
+          @onClick="routerPush"
+          @onMouseEnter="showCategories"
+          @onMouseLeave="hideCategories"
+        >
+          <Icon name="down" :class="{ active: isShowCategories }" />
+        </List>
         <HeaderPanel :items="names" @showSearch="showSearch" />
       </nav>
+      <HeaderCaterories
+        v-if="isShowCategories"
+        :categories="allCategories"
+        @mouseenter="showCategories('catalog')"
+        @mouseleave="hideCategories()"
+      />
     </Container>
   </header>
 </template>

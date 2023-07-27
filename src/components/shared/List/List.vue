@@ -7,7 +7,12 @@
       class="list-item"
       @click="onClick(item.name)"
     >
-      <span :class="item.className">{{ item.title }}</span>
+      <span
+        :class="item.className"
+        @mouseenter="onMouseEnter(item.name)"
+        @mouseleave="onMouseLeave(item.name)"
+        >{{ item.title }}</span
+      >
     </li>
   </ul>
 </template>
