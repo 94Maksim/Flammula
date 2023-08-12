@@ -1,5 +1,9 @@
 <template>
-  <div class="payment">Payment</div>
+  <div class="payment">
+    <Container>
+      <PaymentWrapper />
+    </Container>
+  </div>
 </template>
 
 <script src="./PaymentPage.js"></script>
