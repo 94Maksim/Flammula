@@ -1,0 +1,18 @@
+.pagination {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 5px;
+	&__page {
+		margin: 0 10px 10px 0;
+		width: 30px;
+		height: 30px;
+		box-shadow: 0 0 5px 3px var(--box-shadow-color);
+		border-radius: 5px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&-current {
+			background-color: var(--bs-color-grey);
+		}
+	}
+}

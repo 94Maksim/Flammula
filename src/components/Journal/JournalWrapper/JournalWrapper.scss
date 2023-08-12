@@ -1,0 +1,21 @@
+.journal-wrapper {
+	min-height: 100vh;
+	.loader {
+		height: 50px;
+	}
+	&__head {
+		margin: 12px 0;
+		display: flex;
+		justify-content: space-between;
+		button {
+			padding: 10px;
+			border-radius: 5px;
+			border: 1px solid var(--bs-color-grey);
+		}
+	}
+	.field {
+		padding: 10px;
+		border-radius: 5px;
+		border: 1px solid var(--bs-color-grey);
+	}
+}

@@ -1,7 +1,12 @@
 <template>
   <div class="field">
-    <input :type="type" :placeholder="placeholder"/>
-	<slot/>
+    <input
+      :type="type"
+      :placeholder="placeholder"
+      :value="modelValue"
+      @input="updateInput"
+    />
+    <slot />
   </div>
 </template>
 

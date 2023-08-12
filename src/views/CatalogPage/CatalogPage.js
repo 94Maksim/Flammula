@@ -15,8 +15,8 @@ export default {
     };
   },
   methods: {
-    async getCategories() {
-      await API.categories
+    getCategories() {
+      API.categories
         .getCategoriesWithImage()
         .then((response) => (this.categoriesList = response));
     },
