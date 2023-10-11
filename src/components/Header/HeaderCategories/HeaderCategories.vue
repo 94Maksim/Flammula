@@ -4,5 +4,5 @@
   </div>
 </template>
 
-<script src="./HeaderCaterories.js"></script>
-<style lang="scss" src="./HeaderCaterories.scss"></style>
+<script src="./HeaderCategories.js"></script>
+<style lang="scss" src="./HeaderCategories.scss"></style>

@@ -1,0 +1,39 @@
+.search-card {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	border: 1px solid var(--bs-color-grey);
+	border-radius: 10px;
+	margin-bottom: 10px;
+	cursor: pointer;
+	&:hover {
+		transition: .3s;
+		box-shadow: 0 0 8px var(--bs-color-grey);
+	}
+	&__img {
+		width: 100px;
+		height: 100px;
+		.image {
+			height: 100%;
+			width: 100%;
+			img {
+				object-fit: contain;
+				height: 100%;
+			}
+		}
+	}
+	&__title {
+		font-size: 1.1rem;
+	}
+	&__price {
+		font-size: 1.1rem;
+		font-weight: bold;
+		color: var(--bs-color-grey);
+		&-discount {
+			color: var(--bs-color-red);
+		}
+	}
+
+
+}

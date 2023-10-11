@@ -3,6 +3,7 @@ import products from "./fakeApi/products.js";
 import categories from "./fakeApi/categories.js";
 import posts from "./fakeApi/posts.js";
 import users from "./fakeApi/users.js";
+import auth from "./fakeApi/auth.js";
 
 export default {
   images,
@@ -10,4 +11,5 @@ export default {
   categories,
   posts,
   users,
+  auth,
 };

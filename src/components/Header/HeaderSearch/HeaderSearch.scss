@@ -1,9 +1,9 @@
 .header__search {
 	position: absolute;
 	top: 0;
-	bottom: 0;
 	right: 0;
 	left: 0;
+	bottom: 0;
 	z-index: 99;
 	&-wrapper {
 		width: 100%;
@@ -38,6 +38,24 @@
 			.button {
 				margin-left: 10px;
 			}
+		}
+	}
+	&-result {
+		margin-top: 1px;
+		background-color: var(--bs-color-white);
+		box-shadow: 0 10px 10px -8px var(--bs-color-grey);
+		height: 100%;
+		overflow: auto;
+	}
+	.result-wrapper {
+		width: 50%;
+		margin: auto;
+	}
+	.result-top,
+	.result-query{
+		margin-bottom: 100px;
+		h3 {
+			padding: 5px 0 5px 0;
 		}
 	}
 }

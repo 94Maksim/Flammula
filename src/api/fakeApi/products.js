@@ -35,8 +35,17 @@ async function getProductById(id) {
     .catch((error) => alert(error));
   return product;
 }
+async function getQueryProducts(query) {
+  let products = null;
+  await axios
+    .get(`https://dummyjson.com/products/search?q=${query}`)
+    .then((response) => (products = response.data.products))
+    .catch((error) => alert(error));
+  return products;
+}
 
 export default {
   getProductsByCategory,
   getProductById,
+  getQueryProducts,
 };

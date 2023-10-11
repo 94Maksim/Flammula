@@ -1,5 +1,5 @@
 <template>
-  <div class="basket">Basket</div>
+  <div class="basket"><BasketWrapper /></div>
 </template>
 
 <script src="./BasketPage.js"></script>

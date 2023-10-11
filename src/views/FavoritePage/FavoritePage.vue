@@ -1,5 +1,5 @@
 <template>
-  <div class="favorite">Favorite</div>
+  <div class="favorite"><FavoriteWrapper /></div>
 </template>
 
 <script src="./FavoritePage.js"></script>

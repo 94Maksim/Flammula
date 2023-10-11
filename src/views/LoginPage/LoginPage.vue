@@ -1,5 +1,9 @@
 <template>
-  <div class="login">Login</div>
+  <div class="login">
+    <Container>
+      <LoginWrapper />
+    </Container>
+  </div>
 </template>
 
 <script src="./LoginPage.js"></script>

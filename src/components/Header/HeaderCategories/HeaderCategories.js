@@ -1,6 +1,6 @@
 import List from "../../shared/List/List.vue";
 export default {
-  name: "HeaderCaterories",
+  name: "HeaderCategories",
   components: {
     List,
   },

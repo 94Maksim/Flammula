@@ -9,7 +9,12 @@
       />
     </Transition>
     <Transition name="transformY">
-      <HeaderSearch v-if="isShowSearch" @hideSearch="hideSearch" />
+      <HeaderSearch
+        v-if="isShowSearch"
+        @hideSearch="hideSearch"
+        @getQueryProducts="getQueryProducts"
+        :products="allProducts"
+      />
     </Transition>
     <Container>
       <nav class="header__nav">
@@ -28,9 +33,13 @@
         >
           <Icon name="down" :class="{ active: isShowCategories }" />
         </List>
-        <HeaderPanel :items="names" @showSearch="showSearch" />
+        <HeaderPanel
+          :items="names"
+          @showSearch="showSearch"
+          @getTopProducts="getTopProducts"
+        />
       </nav>
-      <HeaderCaterories
+      <HeaderCategories
         v-if="isShowCategories"
         :categories="allCategories"
         @mouseenter="showCategories('catalog')"

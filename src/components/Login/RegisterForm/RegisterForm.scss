@@ -1,0 +1,94 @@
+.register-form {
+	width: 50%;
+	box-shadow: 0 0 5px 3px var(--box-shadow-color);
+	border-radius: 5px;
+	padding: 20px;
+	h1 {
+		text-align: center;
+		font-size: 1.5rem;
+		margin-bottom: 10px;
+	}
+	.field {
+		margin-bottom: 10px;
+		border: 1px solid var(--box-shadow-color);
+		border-radius: 50px;
+		input {
+			padding: 5px 10px;
+			font-size: 1rem;
+			&::placeholder {
+				color: var(--bs-color-grey);
+				font-style: italic;
+			}
+		}
+	}
+	.date input {
+		padding: 5px 10px;
+		font-size: 1rem;
+		font-weight: inherit;
+		color: var(--bs-color-grey);
+		font-style: italic;
+	}
+	.date-checked input {
+		color: inherit;
+		font-style: inherit;
+	}
+	fieldset {
+		display: flex;
+		justify-content: space-around;
+		margin-bottom: 15px;
+		padding: 5px 0 10px 0;
+		border-radius: 20px;
+		border: 1px solid var(--box-shadow-color);
+		legend {
+			padding: 0 3px;
+			color: var(--bs-color-grey);
+		}
+	}
+	.radio {
+		display: flex;
+		align-items: center;
+		input {
+			border-radius: 50%;
+ 			width: 16px;
+  			height: 16px;
+			border: 2px solid var(--bs-color-grey);
+  			transition: 0.2s all linear;
+  			outline: none;
+  			margin-right: 5px;
+		}
+		input:checked {
+			border: 6px solid var(--bs-color-red);
+		  }	
+	}
+	&__btns {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 16px;
+
+		&-register {
+			border: 1px solid var(--box-shadow-color);
+			border-radius: 40px;
+			padding: 6px 12px;
+			font-size: 1rem;
+			&:hover:enabled {
+				transition: .3s;
+				background-color: var(--bs-color-red);
+				color: var(--bs-color-white);
+			}
+		}
+		&-auth {
+			height: 1rem;
+			transition: .3s;
+			&:hover {
+				opacity: 0.5;
+				transition: .3s;
+			}
+		}
+	}
+	&__error {
+		margin: -5px 0 10px 10px;
+		color: var(--bs-color-red);
+		font-size: 0.8rem;
+	}
+}

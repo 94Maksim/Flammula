@@ -6,7 +6,7 @@ import List from "../shared/List/List.vue";
 import HeaderPanel from "./HeaderPanel/HeaderPanel.vue";
 import HeaderDropdown from "./HeaderDropdown/HeaderDropdown.vue";
 import HeaderSearch from "./HeaderSearch/HeaderSearch.vue";
-import HeaderCaterories from "./HeaderCategories/HeaderCaterories.vue";
+import HeaderCategories from "./HeaderCategories/HeaderCategories.vue";
 export default {
   name: "Header",
   components: {
@@ -17,7 +17,7 @@ export default {
     HeaderPanel,
     HeaderDropdown,
     HeaderSearch,
-    HeaderCaterories,
+    HeaderCategories,
   },
   data() {
     return {
@@ -25,6 +25,7 @@ export default {
       isShowSearch: false,
       isShowCategories: false,
       allCategories: null,
+      allProducts: null,
       titles: [
         {
           title: "Товары",
@@ -68,17 +69,21 @@ export default {
   methods: {
     showDropdown() {
       this.isShowDropdown = true;
+      this.$store.commit("overflowModule/chooseOverflowHidden");
     },
     hideDropdown() {
       this.isShowDropdown = false;
+      this.$store.commit("overflowModule/chooseOverflowAuto");
     },
     showSearch(item) {
       if (item === "search") {
         this.isShowSearch = true;
+        this.$store.commit("overflowModule/chooseOverflowHidden");
       }
     },
     hideSearch() {
       this.isShowSearch = false;
+      this.$store.commit("overflowModule/chooseOverflowAuto");
     },
     routerPush(path) {
       this.$router.push(`/${path}`);
@@ -91,6 +96,16 @@ export default {
     },
     hideCategories() {
       this.isShowCategories = false;
+    },
+    getTopProducts() {
+      API.products
+        .getProductsByCategory("tops")
+        .then((response) => (this.allProducts = response));
+    },
+    getQueryProducts(query) {
+      API.products
+        .getQueryProducts(query)
+        .then((response) => (this.allProducts = response));
     },
   },
   mounted() {
