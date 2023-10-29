@@ -33,7 +33,7 @@
         >
           <Icon name="down" :class="{ active: isShowCategories }" />
         </List>
-        <HeaderPanel
+        <HeaderPanel v-if="names"
           :items="names"
           @showSearch="showSearch"
           @getTopProducts="getTopProducts"

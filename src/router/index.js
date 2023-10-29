@@ -9,6 +9,7 @@ import PaymentPage from "../views/PaymentPage/PaymentPage.vue";
 import AboutPage from "../views/AboutPage/AboutPage.vue";
 import CatalogItems from "../components/Catalog/CatalogItems/CatalogItems.vue";
 import ProductPage from "../views/ProductPage/ProductPage.vue";
+import ProfilePage from "../views/ProfilePage/ProfilePage.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -22,6 +23,11 @@ const router = createRouter({
       path: "/login",
       name: "login",
       component: LoginPage,
+    },
+    {
+      path: "/profile/:user",
+      name: "profile",
+      component: ProfilePage,
     },
     {
       path: "/favorite",
@@ -47,6 +53,7 @@ const router = createRouter({
       path: "/catalog/:items/:id",
       name: "catalogItemsId",
       component: ProductPage,
+      props: (route) => ({ id: route.params.id, key: route.params.id }),
     },
     {
       path: "/journal",

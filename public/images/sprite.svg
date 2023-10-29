@@ -64,8 +64,18 @@
 	<symbol id="icon-favorite"  width="100%" height="100%" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#101820;}</style></defs><title/><g>
 		<path class="cls-1" d="M16,28.72a3,3,0,0,1-2.13-.88L3.57,17.54a8.72,8.72,0,0,1-2.52-6.25,8.06,8.06,0,0,1,8.14-8A8.06,8.06,0,0,1,15,5.68l1,1,.82-.82h0a8.39,8.39,0,0,1,11-.89,8.25,8.25,0,0,1,.81,12.36L18.13,27.84A3,3,0,0,1,16,28.72ZM9.15,5.28A6.12,6.12,0,0,0,4.89,7a6,6,0,0,0-1.84,4.33A6.72,6.72,0,0,0,5,16.13l10.3,10.3a1,1,0,0,0,1.42,0L27.23,15.91A6.25,6.25,0,0,0,29,11.11a6.18,6.18,0,0,0-2.43-4.55,6.37,6.37,0,0,0-8.37.71L16.71,8.8a1,1,0,0,1-1.42,0l-1.7-1.7a6.28,6.28,0,0,0-4.4-1.82Z"/></g>
 	</symbol>
-	<symbol id="icon-login" viewBox="0 0 32 32" width="100%" height="100%"> xmlns="http://www.w3.org/2000/svg"><title/>
+	<symbol id="icon-profile" viewBox="0 0 32 32" width="100%" height="100%"><title/>
 		<g><path d="M16,16A7,7,0,1,0,9,9,7,7,0,0,0,16,16ZM16,4a5,5,0,1,1-5,5A5,5,0,0,1,16,4Z"/><path d="M17,18H15A11,11,0,0,0,4,29a1,1,0,0,0,1,1H27a1,1,0,0,0,1-1A11,11,0,0,0,17,18ZM6.06,28A9,9,0,0,1,15,20h2a9,9,0,0,1,8.94,8Z"/></g>
+	</symbol>
+	<symbol id="icon-login" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<title>Iconly/Curved/Login</title>
+		<g id="Iconly/Curved/Login" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+			<g id="Login" transform="translate(2.000000, 2.000000)" stroke="#000000" stroke-width="1.5">
+				<line x1="12.791" y1="10.1207" x2="0.75" y2="10.1207" id="Stroke-1"></line>
+				<polyline id="Stroke-3" points="9.8643 7.2047 12.7923 10.1207 9.8643 13.0367"></polyline>
+				<path d="M5.2588,5.6299 C5.5888,2.0499 6.9288,0.7499 12.2588,0.7499 C19.3598,0.7499 19.3598,3.0599 19.3598,9.9999 C19.3598,16.9399 19.3598,19.2499 12.2588,19.2499 C6.9288,19.2499 5.5888,17.9499 5.2588,14.3699" id="Stroke-4"></path>
+			</g>
+		</g>
 	</symbol>
 	<symbol id="icon-search" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" width="100%" height="100%">
 		<circle style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" cx="13" cy="13" r="9"/><line style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="26" y1="26" x2="19.437" y2="19.437"/>

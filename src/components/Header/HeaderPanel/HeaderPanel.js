@@ -23,7 +23,12 @@ export default {
     },
     routerPush(path) {
       if (path !== "search") {
-        this.$router.push(`/${path}`);
+        if (path !== "profile") {
+          this.$router.push(`/${path}`);
+        } else
+          this.$router.push(
+            `/${path}/${this.$store.state.authModule.user.username}`
+          );
       }
     },
   },

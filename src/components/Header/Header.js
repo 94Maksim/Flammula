@@ -21,49 +21,15 @@ export default {
   },
   data() {
     return {
+      isAuthorisation: this.isAuth,
       isShowDropdown: false,
       isShowSearch: false,
       isShowCategories: false,
       allCategories: null,
       allProducts: null,
-      titles: [
-        {
-          title: "Товары",
-          name: "catalog",
-        },
-        {
-          title: "Журнал",
-          name: "journal",
-        },
-        {
-          title: "Оплата",
-          name: "payment",
-        },
-        {
-          title: "О нас",
-          name: "about",
-        },
-      ],
-      names: [
-        {
-          icon: "search",
-          name: "Поиск",
-        },
-        {
-          icon: "login",
-          name: "Логин",
-          class: "deskop",
-        },
-        {
-          icon: "favorite",
-          name: "Избранное",
-          class: "deskop",
-        },
-        {
-          icon: "basket",
-          name: "Корзина",
-        },
-      ],
+      login: null,
+      titles: null,
+      names: null,
     };
   },
   methods: {
@@ -112,5 +78,28 @@ export default {
     API.categories
       .getListCategories()
       .then((response) => (this.allCategories = response));
+
+    this.$store.state.authModule.isAuth
+      ? (this.login = "profile")
+      : (this.login = "login");
+
+    this.titles = API.titles.getTitles();
+    this.names = API.titles.getNames(this.login);
+  },
+  computed: {
+    isAuth() {
+      return this.$store.state.authModule.isAuth;
+    },
+  },
+  watch: {
+    isAuth() {
+      if (this.isAuth) {
+        this.login = "profile";
+        this.names = API.titles.getNames(this.login);
+      } else {
+        this.login = "login";
+        this.names = API.titles.getNames(this.login);
+      }
+    },
   },
 };

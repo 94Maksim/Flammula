@@ -1,0 +1,38 @@
+.user-profile {
+	min-height: 100vh;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	table {
+		margin: 50px 0;
+		width: 100%;
+		box-shadow: 0 0 5px 3px var(--box-shadow-color);
+		border-radius: 5px;
+		border-collapse: collapse;
+		thead {
+			font-size: 1.5rem;
+			th {
+				padding: 10px;
+			}
+		}
+		tbody {
+			text-align: center;
+		}
+		tr {
+		}
+		td {
+			padding: 10px;
+			font-size: 1.1rem;
+			vertical-align: bottom;
+			border-bottom: 1px solid var(--box-shadow-color);
+		}
+	}
+	.button {
+		font-size: 1.1rem;
+		color: var(--bs-color-red);
+		box-shadow: 0 0 5px 3px var(--box-shadow-color);
+		border-radius: 5px;
+		padding: 10px 20px;
+	}
+}

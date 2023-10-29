@@ -46,8 +46,31 @@
 			}
 		}
 	}
-	&__email-error,
+	&__login-error,
 	&__password-error {
+		margin: -5px 0 10px 10px;
+		color: var(--bs-color-red);
+		font-size: 0.8rem;
+	}
+	&__loading {
+		.loader {
+			height: 40px;
+			.loader-ring {
+				display: flex;
+				justify-content: center;
+				width: 40px;
+				height: 40px;
+				div {
+					width: 25px;
+					height: 25px;
+					border: 3px solid var(--bs-color-black);
+					border-color: var(--bs-color-black) transparent transparent transparent;
+				}
+			}
+		}
+	}
+	&__errors {
+		text-align: center;
 		margin: -5px 0 10px 10px;
 		color: var(--bs-color-red);
 		font-size: 0.8rem;

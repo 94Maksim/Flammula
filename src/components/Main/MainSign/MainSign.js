@@ -6,4 +6,9 @@ export default {
     Field,
     Button,
   },
+  data() {
+    return {
+      email: "",
+    };
+  },
 };

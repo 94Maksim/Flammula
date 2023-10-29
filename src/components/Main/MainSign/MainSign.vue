@@ -7,7 +7,11 @@
         эксклюзивный контент на почту.
       </p>
       <div class="main__sign-form">
-        <Field type="text" placeholder="Введите e-mail..." />
+        <Field
+          type="text"
+          placeholder="Введите e-mail..."
+          v-model.trim="email"
+        />
         <Button>Подписаться</Button>
       </div>
     </div>

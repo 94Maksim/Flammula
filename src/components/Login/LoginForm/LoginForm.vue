@@ -2,11 +2,11 @@
   <form class="login-form">
     <h1>Логин</h1>
     <Field
-      type="email"
-      placeholder="Введите e-mail..."
-      v-model.trim="dataFields.email"
+      type="text"
+      placeholder="Введите логин..."
+      v-model.trim="dataFields.login"
     />
-    <div class="login-form__email-error">{{ errorsFields?.email }}</div>
+    <div class="login-form__login-error">{{ errorsFields?.login }}</div>
     <Field
       type="password"
       placeholder="Введите пароль..."
@@ -18,7 +18,7 @@
     <div class="login-form__btns">
       <Button
         class="login-form__btns-auth"
-        @click="console.log(this.dataFields)"
+        @click="getAuth"
         :disabled="isDisabled"
         >Войти</Button
       >
@@ -26,6 +26,10 @@
         >Регистрация</Button
       >
     </div>
+    <div v-if="isLoading" class="login-form__loading">
+      <Loader />
+    </div>
+    <div v-if="error" class="login-form__errors">{{ error }}</div>
   </form>
 </template>
 
