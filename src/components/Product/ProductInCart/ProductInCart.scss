@@ -1,0 +1,16 @@
+.product__item-card {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	.item-card {
+		&__link {
+			background-color: var(--bs-color-green);
+			color: var(--bs-color-white);
+			margin-bottom: 10px;
+			padding: 15px;
+			border-radius: 15px;
+			width: 45%;
+		}
+	}
+
+}

@@ -1,0 +1,14 @@
+.cart-total {
+	margin: 80px;
+	font-size: 1.2rem;
+	&__discount {
+		color: var(--bs-color-red);
+	}
+	&__total {
+		font-weight: bold;
+		font-size: 1.8rem;
+	}
+}
+.cart-total > div, .cart-total > h2 {
+	margin-bottom: 10px;
+}

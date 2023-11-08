@@ -39,7 +39,7 @@ export default {
             title: "Избранное",
           },
           {
-            name: "/basket",
+            name: "/cart",
             title: "Корзина",
           },
         ],

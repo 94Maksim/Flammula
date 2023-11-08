@@ -15,7 +15,21 @@
           </span>
           <span class="product-item__old-price"> {{ product.price }}$ </span>
           <Button class="product-item__favorite">Добавить в избранное</Button>
-          <Button class="product-item__basket">Добавить в корзину</Button>
+          <div>
+            <Button
+              v-if="!isProductInCart"
+              class="product-item__cart"
+              @click="addToCart('1')"
+              >Добавить в корзину</Button
+            >
+            <ProductInCart
+              v-else
+              :quantity="quantity"
+              :stock="product.stock"
+              @updateValue="addToCart"
+              @deleteItem="$emit('deleteItem')"
+            />
+          </div>
           <div class="product-item__stock">В наличии {{ product.stock }}шт</div>
         </div>
         <div class="product-item__description-block">

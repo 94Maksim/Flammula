@@ -39,7 +39,7 @@ function getNames(loginType) {
       class: "deskop",
     },
     {
-      icon: "basket",
+      icon: "cart",
       name: "Корзина",
     },
   ];

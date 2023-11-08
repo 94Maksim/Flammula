@@ -5,6 +5,7 @@ import posts from "./fakeApi/posts.js";
 import users from "./fakeApi/users.js";
 import auth from "./fakeApi/auth.js";
 import titles from "./fakeApi/titles.js";
+import carts from "./fakeApi/carts.js";
 
 export default {
   images,
@@ -14,4 +15,5 @@ export default {
   users,
   auth,
   titles,
+  carts,
 };

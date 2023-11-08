@@ -20,6 +20,24 @@ export default {
         .getProductById(this.$route.params.id)
         .then((response) => (this.product = response));
     },
+    addToCart(quantity) {
+      this.product.quantity = quantity;
+      this.$store.dispatch("userCartModule/setUserCart", this.product);
+    },
+    deleteItem() {
+      this.$store.dispatch("userCartModule/deleteItem", this.product);
+    },
+  },
+  computed: {
+    getProductById() {
+      return this.$store.getters["userCartModule/getItemById"](this.product.id);
+    },
+    isProductInCart() {
+      return !!this.getProductById;
+    },
+    productQuantity() {
+      return this.isProductInCart ? this.getProductById.quantity : 0;
+    },
   },
   mounted() {
     this.getProduct();

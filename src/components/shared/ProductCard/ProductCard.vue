@@ -10,6 +10,7 @@
         <span class="product-card__price-discount">${{ discount }}</span>
       </div>
     </div>
+    <slot />
   </div>
 </template>
 

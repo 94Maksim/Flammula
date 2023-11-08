@@ -16,7 +16,11 @@ export default {
   },
   methods: {
     updateInput(event) {
-      this.$emit("update:modelValue", event.target.value);
+      if (this.type === "number") {
+        if (event.target.value !== "") {
+          this.$emit("update:modelValue", event.target.value);
+        }
+      } else this.$emit("update:modelValue", event.target.value);
     },
   },
 };

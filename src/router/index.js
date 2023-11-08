@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import MainPage from "../views/MainPage/MainPage.vue";
 import LoginPage from "../views/LoginPage/LoginPage.vue";
 import FavoritePage from "../views/FavoritePage/FavoritePage.vue";
-import BasketPage from "../views/BasketPage/BasketPage.vue";
+import CartPage from "../views/CartPage/CartPage.vue";
 import CatalogPage from "../views/CatalogPage/CatalogPage.vue";
 import JournalPage from "../views/JournalPage/JournalPage.vue";
 import PaymentPage from "../views/PaymentPage/PaymentPage.vue";
@@ -35,9 +35,9 @@ const router = createRouter({
       component: FavoritePage,
     },
     {
-      path: "/basket",
-      name: "basket",
-      component: BasketPage,
+      path: "/cart",
+      name: "cart",
+      component: CartPage,
     },
     {
       path: "/catalog",
@@ -69,6 +69,10 @@ const router = createRouter({
       path: "/about",
       name: "about",
       component: AboutPage,
+    },
+    {
+      path: "/:catchAll(.*)",
+      component: MainPage,
     },
   ],
 });
