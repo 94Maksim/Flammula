@@ -6,6 +6,7 @@
         @hideDropdown="hideDropdown"
         @onClick="routerPush"
         :items="titles"
+        :name="names[1].name"
       />
     </Transition>
     <Transition name="transformY">
@@ -33,7 +34,8 @@
         >
           <Icon name="down" :class="{ active: isShowCategories }" />
         </List>
-        <HeaderPanel v-if="names"
+        <HeaderPanel
+          v-if="names"
           :items="names"
           @showSearch="showSearch"
           @getTopProducts="getTopProducts"

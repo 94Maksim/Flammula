@@ -1,7 +1,7 @@
 <template>
   <div class="login">
     <Container>
-      <LoginWrapper />
+      <LoginWrapper @registerUser="registerUser" />
     </Container>
   </div>
 </template>

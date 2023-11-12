@@ -3,6 +3,9 @@
 	box-shadow: 0 0 5px 3px var(--box-shadow-color);
 	border-radius: 5px;
 	padding: 20px;
+	@media (max-width:1023px) {
+		width: 90%;
+	}
 	h1 {
 		text-align: center;
 		font-size: 1.5rem;
@@ -71,7 +74,7 @@
 	}
 	&__errors {
 		text-align: center;
-		margin: -5px 0 10px 10px;
+		margin: 5px 0 10px 10px;
 		color: var(--bs-color-red);
 		font-size: 0.8rem;
 	}

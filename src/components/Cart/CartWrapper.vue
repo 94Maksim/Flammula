@@ -12,9 +12,7 @@
           )
         "
         :image="product.thumbnail"
-        @click="
-          routerPush($router.push(`/catalog/${product.category}/${product.id}`))
-        "
+        @click="$router.push(`/catalog/${product.category}/${product.id}`)"
       >
         <CartProductFooter
           @click.stop

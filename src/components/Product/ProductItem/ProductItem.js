@@ -17,6 +17,10 @@ export default {
       type: Number,
       required: true,
     },
+    isProductInFavorite: {
+      type: Boolean,
+      required: true,
+    },
   },
   components: {
     Image,
@@ -26,6 +30,12 @@ export default {
   methods: {
     addToCart(value) {
       this.$emit("addToCart", Number(value));
+    },
+    addToFavorite() {
+      this.$emit("addToFavorite");
+    },
+    deleteFromFavorite() {
+      this.$emit("deleteFromFavorite");
     },
   },
 };

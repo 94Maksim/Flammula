@@ -6,6 +6,7 @@ import users from "./fakeApi/users.js";
 import auth from "./fakeApi/auth.js";
 import titles from "./fakeApi/titles.js";
 import carts from "./fakeApi/carts.js";
+import favorite from "./fakeApi/favorite.js";
 
 export default {
   images,
@@ -16,4 +17,5 @@ export default {
   auth,
   titles,
   carts,
+  favorite,
 };

@@ -13,6 +13,10 @@ export default {
       type: Array,
       required: true,
     },
+    name: {
+      type: String,
+      required: true,
+    },
   },
   methods: {
     hideDropdown(target) {

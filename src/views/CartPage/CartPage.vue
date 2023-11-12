@@ -1,7 +1,7 @@
 <template>
   <div class="cart">
     <Container>
-      <cartWrapper
+      <CartWrapper
         v-if="cart"
         :cart="cart"
         @deleteItem="deleteItem"

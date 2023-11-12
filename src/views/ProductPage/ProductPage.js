@@ -27,6 +27,12 @@ export default {
     deleteItem() {
       this.$store.dispatch("userCartModule/deleteItem", this.product);
     },
+    addToFavorite() {
+      this.$store.dispatch("favoriteModule/setFavorite", this.product);
+    },
+    deleteFromFavorite() {
+      this.$store.dispatch("favoriteModule/deleteItem", this.product);
+    },
   },
   computed: {
     getProductById() {
@@ -37,6 +43,12 @@ export default {
     },
     productQuantity() {
       return this.isProductInCart ? this.getProductById.quantity : 0;
+    },
+    getFavoriteById() {
+      return this.$store.getters["favoriteModule/getItemById"](this.product.id);
+    },
+    isProductInFavorite() {
+      return !!this.getFavoriteById;
     },
   },
   mounted() {

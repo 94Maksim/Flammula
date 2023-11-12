@@ -12,6 +12,9 @@
 		border-collapse: collapse;
 		thead {
 			font-size: 1.5rem;
+			@media (max-width:400px) {
+			font-size: 1.3rem;	
+			}
 			th {
 				padding: 10px;
 			}
@@ -19,13 +22,14 @@
 		tbody {
 			text-align: center;
 		}
-		tr {
-		}
 		td {
 			padding: 10px;
 			font-size: 1.1rem;
 			vertical-align: bottom;
 			border-bottom: 1px solid var(--box-shadow-color);
+			@media (max-width:400px) {
+				font-size: 0.9rem;	
+				}
 		}
 	}
 	.button {
@@ -34,5 +38,8 @@
 		box-shadow: 0 0 5px 3px var(--box-shadow-color);
 		border-radius: 5px;
 		padding: 10px 20px;
+		@media (max-width:400px) {
+			font-size: 0.9rem;	
+			}
 	}
 }

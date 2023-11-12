@@ -69,7 +69,7 @@ export default {
         });
         Promise.all(userPromises).then((postsWithUser) => {
           this.posts = [...this.posts, ...postsWithUser];
-		  this.isPostsLoading = false;
+          this.isPostsLoading = false;
         });
       });
     },

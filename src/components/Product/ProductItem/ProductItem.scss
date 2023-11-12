@@ -51,13 +51,19 @@
 		color: var(--bs-color-grey);
 		text-decoration: line-through;
 	}
-	&__favorite {
+	&__favorite, &__favorite-delete {
 		width: 100%;
 		margin: 10px 0 10px 0;
 		padding: 15px;
-		background-color: var(--box-shadow-color);
 		border-radius: 15px;
 		font-size: 1.1rem;
+	}
+	&__favorite {
+		background-color: var(--box-shadow-color);
+		&-delete {
+			background-color: var(--bs-color-red);
+			color: var(--bs-color-white);
+		}
 	}
 	&__cart {
 		width: 100%;

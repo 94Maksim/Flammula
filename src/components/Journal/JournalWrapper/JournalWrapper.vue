@@ -1,7 +1,7 @@
 <template>
   <div class="journal-wrapper">
     <div class="journal-wrapper__head">
-      <Button>Создать пост</Button>
+      <!-- <Button>Создать пост</Button> -->
       <Select @changeOption="changeOption" :options="sortOptions" />
     </div>
     <Field type="text" placeholder="Поиск..." v-model="search" />

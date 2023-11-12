@@ -14,6 +14,12 @@
     />
     <div class="register-form__error">{{ errorsFields?.lastName }}</div>
     <Field
+      type="text"
+      placeholder="Введите логин..."
+      v-model.trim="dataFields.username"
+    />
+    <div class="register-form__error">{{ errorsFields?.username }}</div>
+    <Field
       :class="[dataFields.birthDate ? 'date-checked' : 'date']"
       type="date"
       v-model="dataFields.birthDate"
@@ -59,7 +65,7 @@
       <Button
         class="register-form__btns-register"
         :disabled="isDisabled"
-        @click="console.log(this.dataFields)"
+        @click="register"
         >Зарегистрироваться</Button
       >
       <Button class="register-form__btns-auth" @click="showLoginForm"

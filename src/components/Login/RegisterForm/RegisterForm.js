@@ -16,6 +16,7 @@ export default {
       dataFields: {
         firstName: "",
         lastName: "",
+        username: "",
         birthDate: "",
         gender: "",
         email: "",
@@ -28,6 +29,24 @@ export default {
   methods: {
     showLoginForm() {
       this.$emit("showLoginForm", false);
+    },
+    register() {
+      this.dataFields.age = this.calculateAge();
+      this.$emit("register", this.dataFields);
+    },
+    calculateAge() {
+      const birthDate = new Date(this.dataFields.birthDate);
+      const dateNow = new Date();
+      let age = dateNow.getFullYear() - birthDate.getFullYear();
+      const birthDateThisYear = new Date(
+        dateNow.getFullYear(),
+        birthDate.getMonth(),
+        birthDate.getDate()
+      );
+      if (dateNow < birthDateThisYear) {
+        age--;
+      }
+      return age;
     },
   },
   watch: {

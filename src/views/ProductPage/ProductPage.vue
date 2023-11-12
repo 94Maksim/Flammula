@@ -7,7 +7,10 @@
         :quantity="productQuantity"
         @addToCart="addToCart"
         @deleteItem="deleteItem"
+        @addToFavorite="addToFavorite"
+        @deleteFromFavorite="deleteFromFavorite"
         :isProductInCart="isProductInCart"
+        :isProductInFavorite="isProductInFavorite"
       />
       <Loader v-else />
     </Container>

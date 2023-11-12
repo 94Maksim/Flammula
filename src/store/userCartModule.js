@@ -26,6 +26,14 @@ export const userCartModule = {
         alert("Ошибка при удалении объекта:", error);
       }
     },
+    async deleteUserCart({ commit }) {
+      try {
+        const response = await API.carts.deleteAll();
+        commit("setUserCart", response);
+      } catch (error) {
+        alert("Ошибка при удалении объекта:", error);
+      }
+    },
   },
   getters: {
     getItemById: (state) => (id) => {

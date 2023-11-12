@@ -11,6 +11,11 @@ export default {
       currentUser: null,
     };
   },
+  methods: {
+    registerUser(userData) {
+      this.$store.dispatch("authModule/registerUser", userData);
+    },
+  },
   computed: {
     user() {
       return this.$store.state.authModule.user;

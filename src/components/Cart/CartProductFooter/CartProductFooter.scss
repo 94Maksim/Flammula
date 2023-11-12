@@ -1,7 +1,5 @@
 .cart__product-footer {
 	padding: 5px;
-	border: 2px solid var(--box-shadow-color);
-	border-radius: 5px;
 	cursor: auto;
 	.product-footer	{
 		&__info {
@@ -23,7 +21,6 @@
 			transition: .3s;
 			background-color: var(--box-shadow-color);
 			font-size: 1.2rem;
-			margin-bottom: 10px;
 			padding: 10px;
 			border-radius: 15px;
 			&:hover {

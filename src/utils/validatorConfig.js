@@ -33,7 +33,7 @@ export const validatorConfig = {
       message: "Фамилия обязательна для заполнения",
     },
   },
-  login: {
+  username: {
     isRequired: {
       message: "Логин обязателен для заполнения",
     },

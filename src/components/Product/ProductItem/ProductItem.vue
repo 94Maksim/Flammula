@@ -14,7 +14,20 @@
             }}$
           </span>
           <span class="product-item__old-price"> {{ product.price }}$ </span>
-          <Button class="product-item__favorite">Добавить в избранное</Button>
+          <div>
+            <Button
+              class="product-item__favorite"
+              v-if="!isProductInFavorite"
+              @click="addToFavorite"
+              >Добавить в избранное
+            </Button>
+            <Button
+              @click="deleteFromFavorite"
+              class="product-item__favorite-delete"
+              v-else
+              >Удалить из избранного
+            </Button>
+          </div>
           <div>
             <Button
               v-if="!isProductInCart"

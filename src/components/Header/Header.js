@@ -54,6 +54,7 @@ export default {
     routerPush(path) {
       this.$router.push(`/${path}`);
       this.isShowCategories = false;
+      this.hideDropdown();
     },
     showCategories(name) {
       if (name === "catalog") {

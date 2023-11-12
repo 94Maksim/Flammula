@@ -14,6 +14,9 @@
 			margin: auto;
 			display: flex;
 			width: 70%;
+			@media (max-width:1023px) {
+				width: 90%;
+			}
 			.field {
 				position: relative;
 				input {
@@ -50,6 +53,9 @@
 	.result-wrapper {
 		width: 50%;
 		margin: auto;
+		@media (max-width:1023px) {
+			width: 90%;
+		}
 	}
 	.result-top,
 	.result-query{

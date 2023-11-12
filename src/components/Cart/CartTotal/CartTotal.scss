@@ -1,6 +1,9 @@
 .cart-total {
 	margin: 80px;
 	font-size: 1.2rem;
+	@media (max-width:500px) {
+		margin: 0;
+	}
 	&__discount {
 		color: var(--bs-color-red);
 	}

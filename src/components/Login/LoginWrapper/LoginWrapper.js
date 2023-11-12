@@ -16,5 +16,8 @@ export default {
     switchForm(isSwitcher) {
       this.isRegister = isSwitcher;
     },
+    registerUser(userData) {
+      this.$emit("registerUser", userData);
+    },
   },
 };

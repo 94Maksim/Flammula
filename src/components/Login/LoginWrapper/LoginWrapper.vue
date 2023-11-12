@@ -1,11 +1,12 @@
 <template>
   <div class="login-wrapper">
     <Transition name="Y">
-      <LoginForm
-        v-if="!isRegister"
-        @showRegisterForm="switchForm"
+      <LoginForm v-if="!isRegister" @showRegisterForm="switchForm" />
+      <RegisterForm
+        v-else
+        @showLoginForm="switchForm"
+        @register="registerUser"
       />
-      <RegisterForm v-else @showLoginForm="switchForm" />
     </Transition>
   </div>
 </template>
