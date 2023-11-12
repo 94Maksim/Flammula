@@ -1,4 +1,4 @@
-http://c92900a0.beget.tech/
+Link to the project: http://c92900a0.beget.tech/
 
 # shop-vue
 
