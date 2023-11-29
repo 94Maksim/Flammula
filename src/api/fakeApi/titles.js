@@ -20,18 +20,11 @@ function getTitles() {
   return titles;
 }
 
-function getNames(loginType) {
-  const name = loginType === "profile" ? "Профиль" : "Логин";
-
+function getNames() {
   const names = [
     {
       icon: "search",
       name: "Поиск",
-    },
-    {
-      icon: loginType,
-      name: name,
-      class: "deskop",
     },
     {
       icon: "favorite",

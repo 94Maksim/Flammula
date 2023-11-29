@@ -1,6 +1,8 @@
 <template>
   <div class="field">
     <input
+      ref="inputField"
+      :name="name"
       :type="type"
       :placeholder="placeholder"
       :value="modelValue"

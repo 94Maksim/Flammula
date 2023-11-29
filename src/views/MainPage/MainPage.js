@@ -2,7 +2,6 @@ import API from "../../api/index.js";
 import MainImage from "../../components/Main/MainImage/MainImage.vue";
 import Loader from "../../components/shared/Loader/Loader.vue";
 import MainGoods from "../../components/Main/MainGoods/MainGoods.vue";
-import MainSign from "../../components/Main/MainSign/MainSign.vue";
 
 export default {
   name: "MainPage",
@@ -10,7 +9,6 @@ export default {
     MainImage,
     Loader,
     MainGoods,
-    MainSign,
   },
   data() {
     return {

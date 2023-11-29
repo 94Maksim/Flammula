@@ -1,5 +1,5 @@
 <template>
-  <div class="search-card" @click="routerPush">
+  <div class="search-card">
     <div class="search-card__img">
       <Image :src="product.thumbnail" alt="image" />
     </div>
@@ -7,7 +7,8 @@
       {{ product.title }}
     </div>
     <div class="search-card__price">
-      <span>${{ product.price }}</span> <span class="search-card__price-discount">${{ getDiscount() }}</span>
+      <span>${{ product.price }}</span>
+      <span class="search-card__price-discount">${{ getDiscount() }}</span>
     </div>
   </div>
 </template>

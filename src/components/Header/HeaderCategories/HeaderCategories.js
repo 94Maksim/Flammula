@@ -6,7 +6,7 @@ export default {
   },
   props: {
     categories: {
-      type: Array,
+      type: [Array, null],
       required: true,
     },
   },

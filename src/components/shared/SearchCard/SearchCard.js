@@ -21,9 +21,5 @@ export default {
           (this.product.price * this.product.discountPercentage) / 100
       );
     },
-    routerPush() {
-      this.$router.push(`/catalog/${this.product.category}/${this.product.id}`);
-      this.closeSearch();
-    },
   },
 };

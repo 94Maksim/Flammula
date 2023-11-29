@@ -14,11 +14,13 @@
 
 .transformY-enter-active, .transformY-leave-active {
 	transform: translateY(0%);
-	transition: .3s;
+	transition: .1s;
+	transition-timing-function: ease-out;
 }
 .transformY-enter-from, .transformY-leave-to {
 	transform: translateY(-100%);
-	transition: .5s;
+	transition: .1s;
+	transition-timing-function: ease-out;
 }
 
 .fade-enter-active, .fade-leave-active {
@@ -28,6 +30,16 @@
 	opacity: 0
 }
 
+
+.transformDropdown-enter-active, .transformDropdown-leave-active {
+	transition: transform 0.3s, opacity 0.2s;
+	height: 100%;
+}
+.transformDropdown-enter-from, .transformDropdown-leave-to {
+	transform: scaleY(0);
+	height: 0;
+	opacity: 0;
+}
 
 .post-list-move {
 	transition: .3s;

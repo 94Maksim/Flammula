@@ -24,7 +24,6 @@
           :src="this.mainImages[2]"
           alt="main image"
         />
-        <MainSign />
       </div>
       <Loader v-else />
     </Transition>

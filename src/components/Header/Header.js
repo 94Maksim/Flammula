@@ -21,13 +21,11 @@ export default {
   },
   data() {
     return {
-      isAuthorisation: this.isAuth,
       isShowDropdown: false,
       isShowSearch: false,
       isShowCategories: false,
       allCategories: null,
       allProducts: null,
-      login: null,
       titles: null,
       names: null,
     };
@@ -44,12 +42,10 @@ export default {
     showSearch(item) {
       if (item === "search") {
         this.isShowSearch = true;
-        this.$store.commit("overflowModule/chooseOverflowHidden");
       }
     },
     hideSearch() {
       this.isShowSearch = false;
-      this.$store.commit("overflowModule/chooseOverflowAuto");
     },
     routerPush(path) {
       this.$router.push(`/${path}`);
@@ -80,27 +76,7 @@ export default {
       .getListCategories()
       .then((response) => (this.allCategories = response));
 
-    this.$store.state.authModule.isAuth
-      ? (this.login = "profile")
-      : (this.login = "login");
-
     this.titles = API.titles.getTitles();
     this.names = API.titles.getNames(this.login);
-  },
-  computed: {
-    isAuth() {
-      return this.$store.state.authModule.isAuth;
-    },
-  },
-  watch: {
-    isAuth() {
-      if (this.isAuth) {
-        this.login = "profile";
-        this.names = API.titles.getNames(this.login);
-      } else {
-        this.login = "login";
-        this.names = API.titles.getNames(this.login);
-      }
-    },
   },
 };

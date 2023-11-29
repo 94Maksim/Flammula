@@ -9,6 +9,14 @@ export default {
       type: String,
       required: false,
     },
+    focus: {
+      type: Boolean,
+      required: false,
+    },
+    name: {
+      type: String,
+      required: true,
+    },
     modelValue: {
       type: [String, Number],
       required: true,
@@ -22,5 +30,10 @@ export default {
         }
       } else this.$emit("update:modelValue", event.target.value);
     },
+  },
+  mounted() {
+    if (this.focus) {
+      this.$refs.inputField.focus();
+    }
   },
 };
