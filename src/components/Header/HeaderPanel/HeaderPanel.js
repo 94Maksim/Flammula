@@ -1,6 +1,6 @@
 import Icon from "../../shared/Icon/Icon.vue";
 import Button from "../../shared/Button/Button.vue";
-import API from "../../../api/index.js";
+import API from "../../../api/fakeApi/index.js";
 export default {
   name: "HeaderPanel",
   props: {

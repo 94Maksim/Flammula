@@ -1,8 +1,8 @@
-import List from "../../shared/List/List.vue";
+import Image from "../../shared/Image/Image.vue";
 export default {
   name: "HeaderCategories",
   components: {
-    List,
+    Image,
   },
   props: {
     categories: {

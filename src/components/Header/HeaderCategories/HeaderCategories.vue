@@ -1,6 +1,15 @@
 <template>
   <div class="header__categories">
-    <List :items="categories" @onClick="routerPush" />
+    <ul>
+      <li
+        v-for="category in categories"
+        :key="category.id"
+        @click="routerPush(category.path)"
+      >
+        <Image :src="category.img" :alt="category.img" />
+        <span>{{ category.name }}</span>
+      </li>
+    </ul>
   </div>
 </template>
 

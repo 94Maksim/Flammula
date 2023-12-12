@@ -1,21 +1,21 @@
-import images from "./fakeApi/images.js";
-import products from "./fakeApi/products.js";
-import categories from "./fakeApi/categories.js";
-import posts from "./fakeApi/posts.js";
-import users from "./fakeApi/users.js";
-import auth from "./fakeApi/auth.js";
-import titles from "./fakeApi/titles.js";
-import carts from "./fakeApi/carts.js";
-import favorite from "./fakeApi/favorite.js";
+import images from "./Images/images.js";
+import products from "./Products/products.js";
+import categories from "./Categories/categories.js";
+/* import posts from "./posts.js";
+import users from "./users.js";
+import auth from "./auth.js";
+import titles from "./titles.js";
+import carts from "./carts.js";
+import favorite from "./favorite.js"; */
 
 export default {
   images,
   products,
   categories,
-  posts,
+  /*   posts,
   users,
   auth,
   titles,
   carts,
-  favorite,
+  favorite, */
 };

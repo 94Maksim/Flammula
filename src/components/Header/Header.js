@@ -1,4 +1,5 @@
-import API from "../../api/index.js";
+import API from "../../api/index";
+import fakeApi from "../../api/fakeApi/index";
 import Icon from "../shared/Icon/Icon.vue";
 import Container from "../shared/Container/Container.vue";
 import Button from "../shared/Button/Button.vue";
@@ -61,22 +62,18 @@ export default {
       this.isShowCategories = false;
     },
     getTopProducts() {
-      API.products
-        .getProductsByCategory("tops")
-        .then((response) => (this.allProducts = response));
+      this.allProducts = API.products.getTopProducts();
     },
     getQueryProducts(query) {
-      API.products
-        .getQueryProducts(query)
-        .then((response) => (this.allProducts = response));
+      if (query.length) {
+        this.allProducts = API.products.getQueryProducts(query);
+      } else this.getTopProducts();
     },
   },
   mounted() {
-    API.categories
-      .getListCategories()
-      .then((response) => (this.allCategories = response));
+    this.allCategories = API.categories.getAllCategories();
 
-    this.titles = API.titles.getTitles();
-    this.names = API.titles.getNames(this.login);
+    this.titles = fakeApi.titles.getTitles();
+    this.names = fakeApi.titles.getNames(this.login);
   },
 };

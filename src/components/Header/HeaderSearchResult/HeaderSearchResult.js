@@ -20,6 +20,7 @@ export default {
   data() {
     return {
       isAnimated: false,
+      isQuery: false,
     };
   },
   mounted() {

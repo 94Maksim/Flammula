@@ -1,7 +1,7 @@
 import CatalogWrapper from "../../components/Catalog/CatalogWrapper/CatalogWrapper.vue";
 import Container from "../../components/shared/Container/Container.vue";
 import Loader from "../../components/shared/Loader/Loader.vue";
-import API from "../../api/index.js";
+import API from "../../api/fakeApi/index";
 export default {
   name: "CatalogPage",
   components: {

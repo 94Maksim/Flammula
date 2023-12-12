@@ -36,9 +36,12 @@
 	&__price {
 		text-align: right;
 		font-weight: bold;
-		color: var(--bs-color-grey);
+		margin-left: 1%;
+		color: var(--bs-color-red);
 		&-discount {
-			color: var(--bs-color-red);
+			color: var(--bs-color-grey);
+			margin-left: 5%;
+			text-decoration: line-through;
 		}
 	}
 

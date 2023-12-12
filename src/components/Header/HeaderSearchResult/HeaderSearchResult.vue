@@ -25,7 +25,7 @@
                 @closeSearch="$emit('hideSearch', 'header__search-result')"
               />
             </div>
-            <div v-else>Ничего не найдено!</div>
+            <div class="result-null" v-else>Ничего не найдено!</div>
           </div>
         </div>
         <div v-else><Loader /></div>

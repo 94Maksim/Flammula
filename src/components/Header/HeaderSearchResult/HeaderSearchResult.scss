@@ -10,7 +10,6 @@
 	}
 	.result {
 		width: 70%;
-		height: 50vh;
 		margin: auto;
 		padding: 20px 0 0 0;
 		background-color: var(--bs-color-white);
@@ -24,16 +23,22 @@
 			width: 100%;
 			height: 100%;
 			padding: 0px 20px;
+			max-height: 50vh;
+
 			overflow: auto;
 			@media (max-width:1023px) {
 				padding: 0 1%;
 			}
 		}
 		.result-top,
-		.result-query{
+		.result-query {
 			h3 {
 				padding: 5px 0 5px 0;
 			}
+		}
+		.result-null {
+			text-align: center;
+			padding-bottom: 20px;
 		}
 	}
 }

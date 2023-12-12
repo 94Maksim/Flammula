@@ -15,11 +15,5 @@ export default {
     closeSearch() {
       this.$emit("closeSearch");
     },
-    getDiscount() {
-      return Math.round(
-        this.product.price -
-          (this.product.price * this.product.discountPercentage) / 100
-      );
-    },
   },
 };

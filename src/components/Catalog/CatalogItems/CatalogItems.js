@@ -1,6 +1,6 @@
 import ProductCard from "../../shared/ProductCard/ProductCard.vue";
 import Container from "../../shared/Container/Container.vue";
-import API from "../../../api/index.js";
+import API from "../../../api/fakeApi/index";
 
 export default {
   name: "CatalogItems",

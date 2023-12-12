@@ -1,14 +1,14 @@
 <template>
   <div class="search-card">
     <div class="search-card__img">
-      <Image :src="product.thumbnail" alt="image" />
+      <Image :src="product.mainImage" alt="image" />
     </div>
     <div class="search-card__title">
-      {{ product.title }}
+      {{ product.name }}
     </div>
     <div class="search-card__price">
-      <span>${{ product.price }}</span>
-      <span class="search-card__price-discount">${{ getDiscount() }}</span>
+      <span>₽{{ product.price }} </span>
+      <span class="search-card__price-discount">₽{{ product.oldPrice }}</span>
     </div>
   </div>
 </template>

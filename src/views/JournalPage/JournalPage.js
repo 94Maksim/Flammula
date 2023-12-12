@@ -1,7 +1,7 @@
 import Container from "../../components/shared/Container/Container.vue";
 import JournalWrapper from "../../components/Journal/JournalWrapper/JournalWrapper.vue";
 import Loader from "../../components/shared/Loader/Loader.vue";
-import API from "../../api/index.js";
+import API from "../../api/fakeApi/index";
 export default {
   name: "JournalPage",
   components: {

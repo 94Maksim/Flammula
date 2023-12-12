@@ -1,7 +1,7 @@
 import Container from "../../components/shared/Container/Container.vue";
 import ProductItem from "../../components/Product/ProductItem/ProductItem.vue";
 import Loader from "../../components/shared/Loader/Loader.vue";
-import API from "../../api/index.js";
+import API from "../../api/fakeApi/index.js";
 export default {
   name: "ProductPage",
   components: {

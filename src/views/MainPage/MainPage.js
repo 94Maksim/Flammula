@@ -1,7 +1,8 @@
-import API from "../../api/index.js";
+import API from "../../api/fakeApi/index.js";
 import MainImage from "../../components/Main/MainImage/MainImage.vue";
 import Loader from "../../components/shared/Loader/Loader.vue";
 import MainGoods from "../../components/Main/MainGoods/MainGoods.vue";
+import { productsData } from "../../api/Products/ProductsData.js";
 
 export default {
   name: "MainPage",
@@ -12,6 +13,7 @@ export default {
   },
   data() {
     return {
+      images: productsData[0].images,
       isLoading: false,
       mainImages: null,
       category: [
